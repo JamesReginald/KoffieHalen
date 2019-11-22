@@ -6,7 +6,7 @@ public class KoffieHalenApp {
     static Scanner sc = new Scanner(System.in);//ll
 
     public static void main(String[] args){
-        System.out.println("Dit is toch wat anders.");
+        System.out.println("KOFFIEE!");
         new Group().groepMaken();
         WarmDrankje koffie = new WarmDrankje();
         koffie.warmDrank("koffie");
