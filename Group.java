@@ -26,4 +26,13 @@ public class Group {
         return group;
     }
 
+    /**
+     * This method prints out all group members
+     */
+    public void showSlaves() {
+        for (Slave slave : group) {
+            System.out.println(slave);
+        }
+    }
+
 }
