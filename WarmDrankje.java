@@ -1,15 +1,10 @@
 package KoffieHalen;
-
 import java.util.Scanner;
 
-public class Koffie {
-	String naam = "Koffie";
+public class WarmDrankje extends Drankje{
 	boolean suiker = false;
 	boolean melk = false;
-	int sterkte;
-	float prijs = (float)1.50;
-	
-	String besteller;
+	int sterkte = 1;
 	
 	private void setStrength(int strength) {
 		if (strength < 1) {
@@ -21,10 +16,12 @@ public class Koffie {
 		System.out.println("Sterkte: " + sterkte);
 	}
 	
-	Koffie setKoffie() {
-		Koffie kopje = new Koffie();
-		
+	WarmDrankje warmDrank(String koffieThee) {
+		WarmDrankje kopje = new WarmDrankje();
+		kopje.naam = koffieThee;
 		Scanner input = new Scanner(System.in);
+		
+		
 		boolean nietAkkoord = true;
 		while(nietAkkoord) {
 			System.out.println("Suiker? [J]a [N]ee");
@@ -50,7 +47,8 @@ public class Koffie {
 			int c = input.nextInt();
 			kopje.setStrength(c);
 			
-			System.out.println("Uw order: ");
+
+			System.out.println("Uw order: "+kopje.naam);
 			System.out.println("Suiker: " + kopje.suiker);
 			System.out.println("Melk: " + kopje.melk);
 			System.out.println("Sterkte: " + kopje.sterkte);
@@ -61,8 +59,13 @@ public class Koffie {
 				nietAkkoord = false;
 			}
 		}
+		input.close();
 
 		return kopje;
+		
 	}
-	
 }
+
+
+
+
