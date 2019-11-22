@@ -1,7 +1,14 @@
 package KoffieHalen;
 
 public class Slave {
-    public void groepMaken(){
-        System.out.println("in groepMaken");
+
+    private String name;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 }
